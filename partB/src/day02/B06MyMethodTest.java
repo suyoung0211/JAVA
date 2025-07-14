@@ -26,6 +26,7 @@ class MyClass {
     static String message;
 
     // 메소드에 인자가 없는 것 vs 있는 것
+    // hello() 메소드 이름이 같고 인자가 다른 형식으로 2개 있습니다. (메소드 오버로딩)
     static void hello() {
         System.out.println("-------------");
         System.out.println("Welcom!! 자바");
