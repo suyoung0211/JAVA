@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudio,eclipse,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudio,eclipse,java
 
+# 혼자만들어본것
+C05MyShapeParent.java
+
 # Test
 test
 
