@@ -93,7 +93,7 @@ public class D05MemberMangerApp {
         list.add(m);
     }
 
-    // 멤버 조회
+    // 멤버 id로 조회
     static Member searchMember(List<Member> list, int id) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getId() == id) {
