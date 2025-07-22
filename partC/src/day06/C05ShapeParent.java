@@ -2,17 +2,51 @@ package day06;
 
 public class C05ShapeParent {
   public static void main(String[] args) {
-    TShape rec = new TRectangle(10, 10, 220, 190, "yellow");
-    TShape cir = new TCircle(10, 20, 0, 0, "blue");
-    TShape tri = new TTriangle(50, 100, 400, 500, "orange");
+    TShape s1 = new TRectangle(10, 10, 220, 190, "yellow");
+    TShape s2 = new TCircle(10, 20, 0, 0, "blue");
+    TShape s3 = new TTriangle(50, 100, 400, 500, "orange");
 
-    System.out.println(rec.getId());
-    System.out.println(cir.getId());
-    System.out.println(tri.getId());
+    // 부모 클래스로 객체생성 가능
+    TShape s4 = new TShape();
+    // 너무 추상적인 객체 => 부모클래스는 객체 생성 못함
 
-    rec.draw();
-    cir.draw();
-    tri.draw();
+    System.out.println(s1.getId());
+    System.out.println(s2.getId());
+    System.out.println(s3.getId());
+
+    s1.draw();
+    s2.draw();
+    s3.draw();
+
+    // 자식클래스는 다른 객체를 만듭니다. 이 다른 객체를 부모 타입으로 참조했을때
+    // 실제 객체의 타입 검사 : instanceof 연산자
+
+    System.out.println("rec instanceof TRectangle : " + (s1 instanceof TRectangle));
+    System.out.println("rec instanceof TTriangle : " + (s1 instanceof TTriangle));
+    System.out.println("rec instanceof TCircle : " + (s1 instanceof TCircle));
+
+    // 사용할 모든 도형을 배열 자료구조에 저장하기 (예시)
+    TShape[] shapes = new TShape[] { s1, s2, s3, null, s3, null };
+    // 맨처음 초기화 할때만 {s1, s2, s3, null, s3, null} 가능
+
+    // 모든 도형 중에 'Circle' 만 반지름을 지정해서 그리기 : TCircle 클래스는 radius 정의
+    for (TShape sh : shapes) { // sh =shapes[i] (i값은 자동으로 증가)
+      if (sh instanceof TCircle) { // null instanceof TCircle 는 false
+        System.out.println("원(Circle) : " + sh.toString());
+        // setRadius 를 실행하기 위해 TCircle 타입으로 캐스팅해야합니다.
+        // sh.setRadius() 는 객체 TCircle 타입이지만 현재 참조는 부모 타입이므로 실행 못함
+        TCircle tmep = (TCircle) sh; // 부모타입 변수를 자식타입으로 참조 X.
+        tmep.setRadius(40);
+        tmep.draw();
+      } else {
+        System.out.println("기타 도형입니다." + sh);
+        // sh.toString() 은 NullPointerException 발생
+      }
+    }
+
+    // shapes 를 다시 새로운 배열로 대입할 때는 반드시 shapes = new TShape[]{s1, s2, s3, null, s3,
+    // null}
+
   }
 }
 
@@ -97,7 +131,8 @@ class TRectangle extends TShape {
   }
 
   TRectangle(int posX, int posY, int width, int height, String color) {
-    super(posX, posY, width, height, color);
+    super(posX, posY, width, height, color); // 부모 클래스의 커스텀 생성자 호출
+                                             // 인자의 형식, 개수는 일치
   }
 
   @Override
