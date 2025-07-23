@@ -42,7 +42,7 @@ public class D05MyMemberMangerApp {
                     System.out.println("잘못된 입력");
                     break;
             }
-            System.out.println(list + "\n");
+            System.out.println(list);
         }
     }
 

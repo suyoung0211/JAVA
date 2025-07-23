@@ -4,8 +4,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import lombok.val;
-
 public class D08TodayVote {
     public static void main(String[] args) {
         // 투표 : 각 메뉴마다 득표 수를 저장

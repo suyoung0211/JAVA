@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
+@NoArgsConstructor // 기본생성자
 @AllArgsConstructor // 모든 속성을 초기화하는 커스텀 생성자
 
 public class Member {
