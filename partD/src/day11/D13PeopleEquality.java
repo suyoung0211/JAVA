@@ -56,7 +56,7 @@ public class D13PeopleEquality {
         System.out.println("set 크기 : " + set.size());
         System.out.println("set : " + set);
 
-        // People 클래스에 @EqualsAndHashCode 구현이 있느냐 없느냐에 따랄 동등성 검사 여부 결정
+        // People 클래스에 @EqualsAndHashCode 구현이 있느냐 없느냐에 따라 동등성 검사 여부 결정
         // 테스트 하기 : @EqualsAndHashCode 있을 때 없을 때 비교해서 정리하세요.
         // 🌟 @EqualsAndHashCode 구현이 있으면 동등성 검사를 할 수 있다.
         // 🌟 결론 : @EqualsAndHashCode 구현하여 내용이 같으면 "동등하다(equality)" 고 판단합니다.
