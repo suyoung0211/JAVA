@@ -1,0 +1,41 @@
+1.
+c
+
+2.
+c
+
+3.
+b
+
+4.
+c
+
+5.
+static
+totalCount
+static
+
+6.
+Calculator
+void
+int
+
+
+7.
+static
+static
+PI
+
+8.
+static
+Car
+static
+
+9.
+name 변수를 "Anonymous" 로 선언
+grade 변수를 1 로 선언
+Name: Anonymous, Grade: 1
+
+10.
+Instance: 1, Static: 2
+Instance: 1, Static: 2

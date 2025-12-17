@@ -1,0 +1,25 @@
+1.
+4번
+
+2.
+2번
+
+3.
+2번
+
+4.
+3번
+
+5.
+2번
+
+1.
+get
+accept
+
+2.
+Integer
+apply
+
+3.
+Predicate<String> f5 = (t) -> t.length() < 10;

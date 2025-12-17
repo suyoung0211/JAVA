@@ -1,0 +1,50 @@
+1.
+4번
+
+2.
+3번
+
+3.
+1번
+
+4.
+3번
+
+5.
+4번
+
+6.
+class Vehicle -> abstract class Vehicle 변경
+void start(int timeout); -> abstract void start(int timeout);
+void stop(); -> abstract void stop();
+
+7.
+default
+
+8.
+void read();
+Writable
+
+9.
+3번
+
+10.
+4번
+
+11.
+private double price; -> private int price;
+this.price - other.price -> Double.compare(this.price - other.price)
+
+12.
+|              종류		| 				설명					|
+|-------------------------------|-----------------------------------------------------------------------|
+|     얕은 복사 (Shallow Copy)	| 객체 내부의 참조 필드까지는 복제하지 않음. 원본 객체와 복제본이 같은 참조 객체 공유	|
+|      깊은 복사 (Deep Copy) 	| 객체 내부의 모든 참조 필드도 새로 복제해서 완전한 독립 복제본 생성		        |
+
+
+13.
+o x o
+
+14.
+o x o
+

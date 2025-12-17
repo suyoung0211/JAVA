@@ -1,0 +1,57 @@
+1.
+2번 String 은 참조타입
+
+
+2.
+System.out.println(str1 == str2); => true
+System.out.println(str1 == str3); => false
+
+
+3.
+System.out.println(p1 == p2); => p2.name p2.age
+System.out.println(p1 == p3); => p1.name p1.age
+
+4.
+override
+public String toString() {
+return "이름 : " + name + "나이 : " + age;
+}
+
+5.
+2번
+
+6.
+제곱수 알고리즘 찾아보기
+int result = 1;
+    for (int i = 0; i < count; i++) {
+        result *= 2;
+    }
+    return result;
+
+7.
+byte 범위가 -128~127까지라
+-128
+
+8.
+x 인자가 if 함수안에서만 사용할 수 있어서
+
+9.
+int grade = 85;
+
+switch(grade/10) {
+case 9 :
+System.out.println("A");
+break;
+case 8 :
+System.out.println("B");
+break;
+case 7 :
+System.out.println("C");
+break;
+case 6 :
+System.out.println("D");
+break;
+default  :
+System.out.println("F");
+break;
+}
